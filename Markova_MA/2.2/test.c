@@ -21,9 +21,9 @@ double f4 (double x)
 }
 int main(void)
 {
-	double a = 0.001, b = 2, m;
+	double a = 0.001, b = 2, m, eps = 0.00001;
 	ErrorCode err;
-/*	m = integral(f1, a, b, &err);
+	m = integral(f1, a, b, &err, eps);
 	
 	printf("f1 ");
 	switch(err)
@@ -38,9 +38,9 @@ int main(void)
 		printf("Answer = %e\n", m);
 	}
 	
-*/
+
 	printf("f2 ");
-	m = integral(f2, a, b, &err);
+	m = integral(f2, a, b, &err, eps);
 	
 	switch(err)
 	{
@@ -54,8 +54,8 @@ int main(void)
 		printf("Answer = %e\n", m);
 	}
 	
-/*	printf("f3 ");
-	m = integral(f3, a, b, &err);
+	printf("f3 ");
+	m = integral(f3, a, b, &err , eps);
 	
 	switch(err)
 	{
@@ -70,7 +70,7 @@ int main(void)
 	}
 	
 	printf("f4 ");
-	m = integral(f4, a, b, &err);
+	m = integral(f4, a, b, &err, eps);
 	
 	switch(err)
 	{
@@ -82,7 +82,7 @@ int main(void)
 		break;
 	case INT_OK:
 		printf("Answer = %e\n", m);
-	}*/
+	}
 	return 0;
 }
 
